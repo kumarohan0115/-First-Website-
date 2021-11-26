@@ -1,19 +1,62 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    background-image: url('computer.jpg');
+    background-size: cover;
+  }
+  a {
+    color: white;
+    font-size: 20px;
+  }
 
-.jjj{
-    height: 500px;
-    margin-top: 50px;
-    background-image: url(clg.jpg);
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-}
+  .items li a{
+    color: white;
+    font-size: 26px;
+    
+  }
+  
+  
+  .main {
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .foot {
+    color: black;
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .foot .email input {
+    padding: 11px;
+    border: none;
+    border: 2px solid black;
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .nav-item li {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 415px) {
+    .nav-item li {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 596px) {
+    .nav-item li {
+      width: 100%;
+    }
+  }
+  
 
 .login{
-    /* width: 30%; */
-    /* display: inline-block; */
     font-weight: 600;
     display: block;
     margin-top: 50px;
@@ -30,9 +73,11 @@
     text-decoration-line: underline;
 }
 
-.uid{
-    padding: 16px;
-    margin-left: 60px;
+
+
+
+.links{
+    display: flex;
 }
 
 h2{
@@ -45,6 +90,11 @@ input{
     display: flex;
 }
 
+.area{
+    width: fit-content;
+    padding: 100px
+}
+
 .heading{
     text-align: center;
     width: inherit;
@@ -55,39 +105,26 @@ input{
     border-radius: 7px 7px 0px 0px;
 }
 
-button{
-    width: 237px;
-    background-color: rgb(36, 165, 36);
-    height: 30px;
-    
+.uid{
+  padding: 12px;
 }
 
-image{
+.uid label {
+  font-size: 28px;
+}
+
+.btnn{
+    margin: auto;
+}
+
+
+/* .b-r{
+    border: 2px solid red;
+    display: grid;
     width: 500px;
-    height: inherit;
+} */
+
+form{
+  border: 1px solid black;
+  padding: 30px;
 }
-
-a{
-    text-decoration: none;
-}
-
-.naav{
-    background-color: rgb(19, 19, 151);
-}
-
-#test1{
-    margin-top: 60px;
-    align-items: flex-start;
-    padding-right: 20px;
-
-}
-
-#test1 a{
-    padding-right: 10px;
-    margin-left: 10px;
-    color: white;
-    border-right: 2px solid;
-    text-decoration: none;
-}
-
-

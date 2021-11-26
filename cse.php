@@ -6,14 +6,14 @@
 // $student_branch=$_POST['branch'];
 // $student_section = $_POST['section'];
 
-$connection= mysqli_connect("localhost","root","","shashank") or die("connection failed");
+$connection= mysqli_connect("localhost","root","","attendance") or die("connection failed");
 
 $query= "SELECT * FROM student_table WHERE BRANCH='CSE'";
 // VALUES('{$student_id}','{$student_name}','{$student_lname}','{$student_branch}','{$student_section}')";
 
 $result=mysqli_query($connection,$query) or die("failed");
 
-header("Location:http://localhost//attend_repo//Website//enroll_student.php");
+header("Location:register.php");
 
 
 mysqli_close($connection);

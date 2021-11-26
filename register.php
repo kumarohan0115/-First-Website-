@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,55 +8,50 @@
     <title>Register</title>
     <link rel="stylesheet" href="style_reg.css">
 </head>
+
 <body>
-    <form action="">
-    <?php
-        $connective= mysqli_connect("localhost","root","","shashank") or die("connection failed");
-        $query_mysql="SELECT *FROM student_table ";
+    <form action="" method="POST">
+        <?php
+        $connective = mysqli_connect("localhost", "root", "", "attendance") or die("connection failed");
+        $query_mysql = "SELECT *FROM student_table ";
 
-        $RESULT=mysqli_query($connective,$query_mysql) or die("query failed");
+        $RESULT = mysqli_query($connective, $query_mysql) or die("query failed");
 
-        if(mysqli_num_rows($RESULT)>0)
-        {
-        ?> 
-                <h2 class="heading">Attendance Register</h2>
-                <div class="form">
-                    <input type="search" name="search" placeholder="SEARCH">
-                    <!-- <button> -->
-                    <!-- <button type="button"
-                        onclick="document.getElementById('date_time_button').innerHTML = Date()">
-                        Click and see Date and Time.</button>
+        if (mysqli_num_rows($RESULT) > 0) {
+        ?>
+            <h2 class="heading">Attendance Register</h2>
+            <div class="form">
+                <input type="search" name="search" placeholder="SEARCH">
+                <button type="submit">search</button>
+                <!-- <p id="date_time_button"></p>
+                <button type="button" onclick="document.getElementById('date_time_button').innerHTML = Date()">Date and Time.</button> -->
 
-                        <p id="date_time_button"></p></button> -->
+                <input id="integer" type="text" placeholder="Enter text">
 
-                        <input id="integer" type="number">
+                <p id="validation_demo"></p>
 
-                        <button type="button" onclick="myFunction()">Submit</button>
+                <script>
+                    function myFunction() {
+                        var val, msg;
 
-                        <p id="validation_demo"></p>
+                        // Get the value of input field with id="numb"
 
-                        <script>
-                        function myFunction() {
-                            var val, msg;
+                        val = document.getElementById("integer").value;
 
-                            // Get the value of input field with id="numb"
+                        // If x is Not a Number or less than one or greater than 10
 
-                            val = document.getElementById("integer").value;
-
-                            // If x is Not a Number or less than one or greater than 10
-
-                            if (isNaN(val) || val < 1 || val > 100) {
-                                msg = "Input is not valid";
-                            } else {
-                                msg = "Input is OK";
-                            }
-                            document.getElementById("validation_demo").innerHTML = msg;
+                        if (isNaN(val) || val < 1 || val > 100) {
+                            msg = "Input is not valid";
+                        } else {
+                            msg = "Input is OK";
                         }
-                        </script>
-                </div>
-                <div class="attributes">
+                        document.getElementById("validation_demo").innerHTML = msg;
+                    }
+                </script>
+            </div>
+            <div class="attributes">
                 <h2 class="date">
-                    Date:<?php echo  date("d/m/Y")?>
+                    Date:<?php echo  date("d/m/Y") ?>
                     <!-- <script>
                         function myFunction() {
                         var d = new Date();
@@ -73,18 +69,18 @@
                         <th>Status</th>
                         <th>DATE</th>
                     </tr>
-                
-                    
-                    <?php while($rowforjoin=mysqli_fetch_assoc($RESULT))
-                    {
-                        ?>
+
+
+                    <?php while ($rowforjoin = mysqli_fetch_assoc($RESULT)) {
+                    ?>
                         <tr>
-                            
-                            <td><?php echo $rowforjoin['STU_ID']?></td>
-                            <td><?php echo $rowforjoin['STU_NAME']?> </td>
+
+                            <td><?php echo $rowforjoin['STU_ID'] ?></td>
+                            <td><?php echo $rowforjoin['F_name'] ?> </td>
                             <td><?php echo $rowforjoin['BRANCH'] ?></td>
                             <td><?php echo $rowforjoin['SECTION'] ?> </td>
-                            <td><button id="p" type="submit">P</button>
+                            <td>
+                                <button id="p" onclick="present()" type="submit">P</button>
                                 <button id="a" type="submit">A</button>
                             </td>
                             <td><?php echo $rowforjoin['DATE'] ?> </td>
@@ -92,17 +88,26 @@
                     <?php }
 
                     ?>
-                    
-                    
-                    
+
+
+
 
                 </table>
             </div>
 
-        <?php }
-         ?>
+        <?php 
+        }
+        ?>
 
-    
+
     </form>
 </body>
+
+<script>
+    function present()
+    {
+        include('dateAndtime.php');
+    }
+</script>
+
 </html>

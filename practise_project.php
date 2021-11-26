@@ -15,12 +15,15 @@ $ecoded_pass=bin2hex($teacher_pass);
 
 
 
-$connection= mysqli_connect("localhost","root","","shashank") or die("connection failed");
+$connection= mysqli_connect("localhost","root","","attendance") or die("connection failed");
 
 $sql_query= "INSERT INTO teacher_sheet (teacher_userid,teacher_password,NAME_TEAHCER,PHONE_NUMBER,Branch)
 VALUES ('{$teacher_use}','{$ecoded_pass}','{$teacher_name}','{$teacher_phone}','{$teacher_subject}')";
 
 $result=mysqli_query($connection,$sql_query) or die("i know why ");
+
+
+header('Location:signup.php');
 
 mysqli_close($connection);
 

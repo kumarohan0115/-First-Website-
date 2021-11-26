@@ -13,7 +13,7 @@ $USER_PASSWORD=$_POST['pass'];
 $decoded_pass=bin2hex($USER_PASSWORD);
 
 
-$connect=mysqli_connect("localhost","root","","shashank") or die("connection failed ");
+$connect=mysqli_connect("localhost","root","","attendance") or die("connection failed ");
 
 $login="SELECT *FROM teacher_sheet WHERE teacher_userid = '{$USER}' AND teacher_password = '{$decoded_pass}'";
 

@@ -19,12 +19,10 @@
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="color: white;">
 <div class="navbar-header">
-      <a class="navbar-brand" href="pagalpanti.php">Srank Portal</a>
+      <a class="navbar-brand" href="index.php">Srank Portal</a>
     </div>
   <ul class="navbar-nav"  style= "padding-left: 50px;">
-    <li class="nav-item active">
-      <a class="nav-link" href="pagalpanti.php">Home</a>
-    </li>
+    <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
     <li class="nav-item">
       <a class="nav-link" href="ABOUTUS.HTML">About</a>
     </li>
@@ -32,20 +30,19 @@
     <ul class="nav-item navbar-nav navbar-right" style="color:white; margin-left:800px; background-color: black;">
       <li id="lk"><a href="login.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
+    <h1 style="text-align: right; margin-right:5%">
+        <?php
+            echo "WELCOME ". $_SESSION["tname"];
+        ?>
+    </h1>
   
 </nav>
 
     <div class="cotainer">
-        <div class="t_name">
-            <h3>
-                <?php
-                    echo "WELCOME". $_SESSION["tname"];
-                ?>
-            </h3>
-        </div>
+            
         <div class="row rooo">
             <div class="col-4 offset-1" id="enrol">
-                <form class="form-group"  action="registerfor_student.php" method="POST" id="newen" >
+                <form class="form-group"  action="studentregistration.php" method="POST" id="newen" >
                     <div class="row">
                         <h5 id="t">
                             New Enrollment
@@ -71,10 +68,7 @@
                         <label for="section">Section</label>
                         <input type="text" class="form-control" name="section" placeholder="Section" required>
                     </div>
-                    <div class="roll">
-                        <label for="tname">Mentor:</label>
-                        <input type="text" class="form-control" name="tname" autocomplete="" placeholder="Mentor Name">
-                    </div>
+                    
 
                     <button type="submit" class="btn-sm">Enroll</button>
                 </form>
@@ -92,7 +86,6 @@
                 <hr>
                 <div class="row" id="cs">
                     <h4><a href="cse.php">Computer Science Engineering(CSE)</a></h4>
-
                 </div>
                 <div class="row" id="it">
                     <h4><a href="it.php">Information Tchnology</a></h4>
