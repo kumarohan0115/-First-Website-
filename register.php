@@ -67,7 +67,7 @@
                         <th>Branch</th>
                         <th>Section</th>
                         <th>Status</th>
-                        <th>DATE</th>
+                        <!-- <th>DATE</th> -->
                     </tr>
 
 
@@ -83,9 +83,12 @@
                                 <button id="p" onclick="present()" type="submit">P</button>
                                 <button id="a" type="submit">A</button>
                             </td>
-                            <td><?php echo $rowforjoin['DATE'] ?> </td>
+                            <!-- <td><?php echo $rowforjoin['Date'] ?> </td> -->
                         </tr>
-                    <?php }
+                    
+                    <?php 
+                    
+                    }
 
                     ?>
 
@@ -106,7 +109,8 @@
 <script>
     function present()
     {
-        include('dateAndtime.php');
+        // alert("ruk");
+        include ('dateAndtime.php');
     }
 </script>
 

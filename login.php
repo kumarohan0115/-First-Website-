@@ -43,8 +43,8 @@
           <h2 class="heading">Login</h2>
         </div>
         <div class="uid">
-          <label for="UID">User ID: </label>
-          <input class="form-control" type="text,email" name="uid" placeholder="Enter User ID" required>
+          <label for="UID">User ID/Email: </label>
+          <input class="form-control" type="text,email" name="uid" placeholder="Enter Email ID" required>
         </div>
         <div class="uid">
           <label for="Password">Password: </label>
@@ -55,7 +55,7 @@
           <label for="Forget userid"><a href=""> | Forget User-Id</a></label>
         </div>
         <div class="links">
-          <label for="Registration"><a href="reg.php">Click Here for Registeration</a></label>
+          <label for="Registration"><a href="signup.php">Click Here for Registeration</a></label>
         </div>
 
         <div class="btnn">

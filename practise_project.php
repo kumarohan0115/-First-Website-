@@ -23,7 +23,7 @@ VALUES ('{$teacher_use}','{$ecoded_pass}','{$teacher_name}','{$teacher_phone}','
 $result=mysqli_query($connection,$sql_query) or die("i know why ");
 
 
-header('Location:signup.php');
+header('Location:login.php');
 
 mysqli_close($connection);
 

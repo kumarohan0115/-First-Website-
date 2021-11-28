@@ -1,4 +1,6 @@
 <?php
+
+error_log("Mai hoon");
 // date_default_timezone_set("Asia/Kolkata");
 
 // date("d:m:y");
@@ -15,7 +17,12 @@ $database_name="attendance"; //now i have changed the database name
 
 $connection= mysqli_connect($server_name,$user_name,$password,$database_name) or die("die");
 
-// $connect=mysqli_connect("localhost","root","","attendance") or die("NBO");
+$connect=mysqli_connect("localhost","root","","attendance") or die("NBO");
+
+
+
+
+
 $date = $_POST['Date'];
 //
 $newdate= (string)$date;
@@ -23,7 +30,7 @@ $newdate= (string)$date;
 echo  var_dump($newdate);
 
 
-$mysql= "CREATE TABLE nothing (P VARCHAR(1),A VARCHAR (1))";
+$mysql= "CREATE TABLE `nothing` (`P` VARCHAR(1),`A` VARCHAR (1))";
 
 $result= mysqli_query($connect,$mysql) or die("no");
 

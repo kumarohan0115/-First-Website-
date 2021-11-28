@@ -32,13 +32,20 @@
         </div>
     </nav>
 
+<div class="container">
+    
+<div class="row">
+    
 
-    <div class="main">
+    <div class="main col-6">
 
+        <section>
+            <img src="https://app.spline.design/static/media/spline_logo.95327944.png" alt="">
+        </section>
 
-        <form class="form-group" action="practise_project.php" onsubmit="myFunction()" method="POST">
+        <form class="form-group col-6" action="practise_project.php" onsubmit="myFunction()" method="POST">
             <div class="register">
-                <h1>Sign Up</h1>
+                <h1>Create Your Account</h1>
             </div>
             <hr>
             <!-- <div class="fog container-fluid"> -->
@@ -53,12 +60,12 @@
                 <div class="inputs">
                     <label for="Name">Password:</label>
                     <input type="password" class="form-control" name="pass" placeholder="Password" aria-label="Password" minlength="8" maxlength="20" required>
-                    <p>Password Must be atleast 8 character.</p>
+                    <!-- <p>Password Must be atleast 8 character.</p> -->
                 </div>
                 <div class="inputs">
                     <label for="Name">Password:</label>
-                    <input type="password" class="form-control" name="Pass" placeholder="Password" aria-label="Password" minlength="8" maxlength="20" required>
-                    <p>Password Must be same as Above.</p>
+                    <input type="password" class="form-control" name="Pass" placeholder="Confirm Password" aria-label="Password" minlength="8" maxlength="20" required>
+                    <!-- <p>Password Must be same as Above.</p> -->
                 </div>
                 <div class="inputs">
                     <label for="Name">Phone:</label>
@@ -75,16 +82,14 @@
         </form>
     </div>
 
-    <div class="footer">
-        <p>&copy; <em id="date"></em>Attandance</p>
-    </div>
+    
 
 
-    <script>
+    <!-- <script>
         function myFunction() {
             alert("Registration Sucessful.....!");
         }
-    </script>
+    </script> -->
 
     <script>
      function todayDate(){
@@ -93,6 +98,12 @@
         return document.getElementById("date").innerHTML = n;
       }
    </script>
+</div>
+
+    </div>
+    <div class="footer">
+        <p>&copy; <em id="date"></em>Attandance</p>
+    </div>
 </body>
 
 </html>
